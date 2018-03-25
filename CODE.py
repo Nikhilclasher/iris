@@ -19,7 +19,7 @@ X = iris.data
 Y = iris.target
 validation_size = 0.20
 X_train, X_validation, Y_train, Y_validation = cross_validation.train_test_split(X, Y, test_size=validation_size)
-clf  = svm.SVC(kernel = 'poly')
+clf  = svm.SVC(kernel = 'Linear')
 #clf.kernel
 clf.fit(X_train,Y_train)
 accuracy = clf.score(X_validation,Y_validation)
